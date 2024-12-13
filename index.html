@@ -3,53 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravi Nanduru | Portfolio</title>
+    <title>Ravi Nanduru | Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="fade-in">Ravi Nanduru</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="hero">
+        <div class="container">
+            <h1 class="fade-in">Ravi Nanduru</h1>
+            <p class="tagline">Software Engineer | Cloud Specialist | Java Enthusiast</p>
+            <a href="#contact" class="cta-btn">Contact Me</a>
+        </div>
     </header>
 
     <main>
         <section id="about" class="section fade-in">
             <h2>About Me</h2>
-            <p>I am Ravi Nanduru, a Software Engineer passionate about building scalable and secure applications.</p>
+            <p>Passionate software engineer with expertise in building scalable, secure, and cloud-based applications using Java, Spring Boot, and AWS services.</p>
         </section>
 
         <section id="skills" class="section fade-in">
             <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Java</li>
-                <li>SQL</li>
-                <li>JavaScript</li>
-                <li>Angular</li>
-                <li>Spring Boot</li>
-                <li>AWS</li>
-            </ul>
+            <div class="skills-list">
+                <div class="skill">
+                    <img src="images/java-icon.png" alt="Java" class="skill-icon">
+                    <h3>Java</h3>
+                    <p>Extensive experience building robust Java-based applications.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/aws-icon.png" alt="AWS" class="skill-icon">
+                    <h3>AWS</h3>
+                    <p>Expert in cloud technologies like Lambda, EC2, and DynamoDB.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/spring-icon.png" alt="Spring Boot" class="skill-icon">
+                    <h3>Spring Boot</h3>
+                    <p>Building microservices architecture using Spring Boot and Spring Cloud.</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects" class="section fade-in">
             <h2>Projects</h2>
-            <p>Explore my recent projects that demonstrate my technical skills and problem-solving abilities.</p>
-        </section>
-
-        <section id="hobbies" class="section fade-in">
-            <h2>Hobbies</h2>
-            <div class="gallery">
-                <img src="images/cooking.jpg" alt="Cooking">
-                <img src="images/ROADTRIP.JPG" alt="Road Trips">
-                <img src="images/DRONE.JPG" alt="Drone Shots">
+            <div class="project-cards">
+                <div class="project-card">
+                    <h3>API Security Enhancement</h3>
+                    <p>Implemented OAuth 2.0 and JWT for API security in an enterprise-level system.</p>
+                    <a href="https://github.com/ravikiran/project" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Cloud Infrastructure Automation</h3>
+                    <p>Automated cloud infrastructure deployment using AWS CloudFormation and Terraform.</p>
+                    <a href="https://github.com/ravikiran/project" target="_blank" class="project-link">View on GitHub</a>
+                </div>
             </div>
         </section>
 
