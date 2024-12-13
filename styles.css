@@ -1,13 +1,3 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    scroll-behavior: smooth;
-}
-
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
@@ -20,6 +10,45 @@ body {
 .hero .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Profile Picture */
+.profile-img {
+    width: 50px;  /* Penny size (about 50px) */
+    height: 50px;  /* Penny size (about 50px) */
+    border-radius: 50%;  /* Circle shape */
+    object-fit: cover;  /* Ensures the image fits inside the circle without distortion */
+    margin-bottom: 20px;
+    border: 3px solid #fff;  /* White border around the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    animation: scale-up 1s ease-out, border-glow 1.5s infinite alternate;  /* Animation */
+}
+
+/* Animation for profile picture */
+@keyframes scale-up {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes border-glow {
+    0% {
+        border-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        border-color: #ff5733; /* Glowing orange border */
+        box-shadow: 0 0 20px rgba(255, 87, 51, 0.6); /* Glowing effect */
+    }
+    100% {
+        border-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .hero h1 {
@@ -44,81 +73,4 @@ body {
 .cta-btn:hover {
     background-color: #2575fc;
     color: white;
-}
-
-/* Sections */
-.section {
-    padding: 4rem 2rem;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fade-in-up 1s forwards;
-}
-
-.skills-list {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.skill {
-    text-align: center;
-}
-
-.skill h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-.skill p {
-    font-size: 0.9rem;
-}
-
-/* Project Cards */
-.project-cards {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.project-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 250px;
-}
-
-.project-card h3 {
-    font-size: 1.2rem;
-    color: #2575fc;
-}
-
-.project-card p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.project-link {
-    color: #6a11cb;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-link:hover {
-    color: #2575fc;
-}
-
-/* Animations */
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
