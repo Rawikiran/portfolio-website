@@ -1,0 +1,26 @@
+{
+  "mcp": {
+    "inputs": [
+      {
+        "type": "promptString",
+        "id": "github_token",
+        "description": "GitHub Personal Access Token",
+        "password": true
+      }
+    ],
+    "servers": {
+      "github": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "--network=host",
+          "-e",
+          "GITHUB_PERSONAL_ACCESS_TOKEN=${input:github_token}",
+          "ghcr.io/github/github-mcp-server"
+        ]
+      }
+    }
+  }
+}
